@@ -1,0 +1,27 @@
+<div style="text-align:center">
+        <ng-template [ngIf]="users.length>0" [ngIfElse]="nousers">
+                <div> Users Available
+                  <table>
+                        <thead>
+                          <th>Name</th>
+                          <th>Location</th>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let user of users">
+                             <td>{{user.name}}</td>
+                             <td>{{user.location}}</td>
+                          </tr>
+                        </tbody>
+                                    
+                  </table>
+                </div>
+        </ng-template>
+              
+        <ng-template #nousers>
+                <div>
+                  No users Available.
+                </div>
+        </ng-template>
+        
+    
+</div>
